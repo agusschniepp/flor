@@ -85,13 +85,13 @@ scene.add(particles);
         0.1,
         1000
     );
-    camera.position.set(0.5,0.5,6)
+    camera.position.set(0,0,6)
     renderer.shadowMap.enabled = true;
     const orbit = new OrbitControls(camera, renderer.domElement);
     orbit.enableZoom = true;
     orbit.enablePan = false;
     orbit.maxDistance = 8;
-    orbit.minDistance = 2;
+    orbit.minDistance = 4;
     orbit.rotateSpeed = .2;
     orbit.update();
 
@@ -102,8 +102,7 @@ scene.add(particles);
         model.scale.y = 9;
         model.scale.x = 9;
         model.scale.z = 9;
-        model.position.set(0.1,-0.5,0);
-        model.rotation.y = 59.8;
+        model.position.set(0,0,0);
     }, undefined, function(error) {
         console.error(error);
     });
